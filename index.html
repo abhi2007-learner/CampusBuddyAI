@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Campus Buddy AI</title>
+
+   <link rel="stylesheet" href="/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Decorative background -->
+    <div class="floating-shape shape-one">✦</div>
+    <div class="floating-shape shape-two">♡</div>
+    <div class="floating-shape shape-three">✿</div>
+    <div class="floating-shape shape-four">✦</div>
+
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+       <div class="logo">
+
+    <img src="/campusbuddy.png" alt="Campus Buddy Logo">
+
+    <div>
+        <h2>Campus Buddy</h2>
+        <span>Your study companion</span>
+    </div>
+
+</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#tools">Study Tools</a>
+            <a href="#ask">Ask Buddy</a>
+        </div>
+
+        <button class="nav-button">
+            ✨ My Space
+        </button>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <main id="home">
+
+        <section class="hero">
+
+            <div class="hero-text">
+
+                <div class="welcome-badge">
+                    ✨ AI-powered study buddy
+                </div>
+
+                <h1>
+                    Study smarter,
+                    <span>stress less.</span>
+                </h1>
+
+                <p>
+                    Meet your friendly AI study companion.
+                    Ask questions, create study plans, practice
+                    for exams and make college life a little easier.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#ask" class="primary-button">
+                        Ask Buddy
+                        <span>→</span>
+                    </a>
+
+                    <a href="#tools" class="secondary-button">
+                        Explore tools
+                    </a>
+
+                </div>
+
+                <div class="mini-info">
+
+                    <div>
+                        <strong>24/7</strong>
+                        <small>Study help</small>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div>
+                        <strong>AI</strong>
+                        <small>Powered by Gemma</small>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div>
+                        <strong>♡</strong>
+                        <small>Made for students</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HERO CARD -->
+
+            <div class="hero-card">
+
+                <div class="card-decoration">✦</div>
+
+                <div class="buddy-avatar">
+                    🧸
+                </div>
+
+                <div class="buddy-message">
+
+                    <span class="message-label">
+                        CAMPUS BUDDY
+                    </span>
+
+                    <h3>
+                        Hey there! 👋
+                    </h3>
+
+                    <p>
+                        What are we learning today?
+                        I'm ready when you are! 💕
+                    </p>
+
+                </div>
+
+                <div class="suggestion">
+
+                    <span>💡</span>
+
+                    <p>
+                        <strong>Try asking:</strong><br>
+                        "Explain operating systems
+                        in simple words."
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ASK BUDDY -->
+
+        <section class="ask-section" id="ask">
+
+            <div class="section-heading">
+
+                <span>💬 ASK BUDDY</span>
+
+                <h2>
+                    Stuck on something?
+                    <em>Ask me.</em>
+                </h2>
+
+                <p>
+                    No question is too basic. I'll explain concepts
+                    in a simple, student-friendly way.
+                </p>
+
+            </div>
+
+
+            <div class="question-card">
+
+                <div class="question-top">
+
+                    <div class="buddy-small">
+                        🤖
+                    </div>
+
+                    <div>
+                        <strong>What would you like to know?</strong>
+                        <span>Ask anything about your studies</span>
+                    </div>
+
+                </div>
+
+
+                <textarea
+                    id="question"
+                    placeholder="e.g. Explain deadlock with a simple example..."
+                ></textarea>
+
+
+                <div class="question-bottom">
+
+                    <span class="hint">
+                        ✨ Powered by Gemma
+                    </span>
+
+                    <button onclick="askBuddy()" class="ask-button">
+                        Ask Buddy
+                        <span>✦</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- ANSWER -->
+
+            <div class="answer-card">
+
+                <div class="answer-header">
+
+                    <div class="answer-icon">
+                        💕
+                    </div>
+
+                    <div>
+                        <strong>Buddy's Answer</strong>
+                        <span>Here's what I found for you</span>
+                    </div>
+
+                </div>
+
+                <div id="answer" class="answer-content">
+
+                    <div class="empty-answer">
+
+                        <div class="empty-icon">
+                            🌷
+                        </div>
+
+                        <p>
+                            Your answer will appear here.
+                        </p>
+
+                        <span>
+                            Ask me something above to get started!
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- STUDY TOOLS -->
+
+        <section class="tools-section" id="tools">
+
+            <div class="section-heading center">
+
+                <span>🌸 STUDY TOOLS</span>
+
+                <h2>
+                    Everything you need,
+                    <em>in one place.</em>
+                </h2>
+
+                <p>
+                    Little tools to make your student life easier.
+                </p>
+
+            </div>
+
+
+            <div class="tools-grid">
+
+
+                <!-- TOOL 1 -->
+
+                <div class="tool-card pink">
+
+                    <div class="tool-icon">
+                        📅
+                    </div>
+
+                    <span class="coming-soon">
+                        COMING SOON
+                    </span>
+
+                    <h3>
+                        Study Planner
+                    </h3>
+
+                    <p>
+                        Tell Buddy your subjects, exams and
+                        available time. Get a personalized plan.
+                    </p>
+
+                   <button onclick="openPlanner()">
+    Create my plan →
+</button>
+                </div>
+
+
+                <!-- TOOL 2 -->
+
+                <div class="tool-card lavender">
+
+                    <div class="tool-icon">
+                        📝
+                    </div>
+
+                    <span class="coming-soon">
+                        COMING SOON
+                    </span>
+
+                    <h3>
+                        Practice Challenge
+                    </h3>
+
+                    <p>
+                        Generate practice questions and test
+                        yourself before your next exam.
+                    </p>
+
+                    <button onclick="openPractice()">
+    Start practicing →
+</button>
+
+                </div>
+
+
+                <!-- TOOL 3 -->
+
+                <div class="tool-card blue">
+
+                    <div class="tool-icon">
+                        🧮
+                    </div>
+
+                    <span class="coming-soon">
+                        COMING SOON
+                    </span>
+
+                    <h3>
+                        CGPA Calculator
+                    </h3>
+
+                    <p>
+                        Quickly calculate your SGPA and CGPA
+                        without reaching for a calculator.
+                    </p>
+
+                    <button onclick="openCGPA()">
+    Calculate CGPA →
+</button>
+
+                </div>
+
+
+                <!-- TOOL 4 -->
+
+                <div class="tool-card peach">
+
+                    <div class="tool-icon">
+                        🖼️
+                    </div>
+
+                    <span class="coming-soon">
+                        COMING SOON
+                    </span>
+
+                    <h3>
+                        Ask from Image
+                    </h3>
+
+                    <p>
+                        Upload a question, diagram or notes and
+                        let Buddy help you understand it.
+                    </p>
+
+                  <button type="button" onclick="document.getElementById('imageBuddyModal').style.display='flex'">
+    Ask Buddy from Image →
+</button>
+
+                </div>
+
+            
+
+        
+        <!-- TOOL 5 -->
+
+<div class="tool-card pink quiz-card">
+
+    <div class="tool-icon">
+        🎯
+    </div>
+
+    <span class="coming-soon">
+        NEW
+    </span>
+
+    <h3>
+        Quiz Mode
+    </h3>
+
+    <p>
+        Test your knowledge with an AI-generated quiz
+        and get your score instantly.
+    </p>
+
+    <button type="button" onclick="openQuiz()">
+        Start Quiz →
+    </button>
+
+</div>
+
+<!-- TOOL 6 -->
+
+<div class="tool-card lavender">
+    <div class="tool-icon">🍅</div>
+    <span class="coming-soon">NEW</span>
+    <h3>Focus Timer</h3>
+    <p>
+        Stay focused with short study sessions
+        and breaks using the Pomodoro technique.
+    </p>
+    <button onclick="openPomodoro()">
+        Start Focus Session →
+    </button>
+</div>
+</div>
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <div class="footer-logo">
+                🎓 <strong>Campus Buddy</strong>
+            </div>
+
+            <p>
+                Made with 💕 for students who want to study smarter.
+            </p>
+
+            <span>
+                Powered by open-source AI · Gemma
+            </span>
+
+        </footer>
+
+    </main>
+    <!-- STUDY PLANNER POPUP -->
+
+<div id="plannerModal" class="planner-modal">
+
+    <div class="planner-box">
+
+        <button class="close-planner" onclick="closePlanner()">×</button>
+
+        <div class="planner-title">
+            <div class="planner-icon">📅</div>
+
+            <div>
+                <span>STUDY PLANNER</span>
+                <h2>Let's make a plan! 🌸</h2>
+            </div>
+        </div>
+
+        <p class="planner-subtitle">
+            Tell Buddy a little about your exam and I'll create
+            a personalized study plan for you.
+        </p>
+
+        <label>What subject are you studying?</label>
+
+        <input
+            type="text"
+            id="plannerSubject"
+            placeholder="e.g. Operating Systems"
+        >
+
+        <label>How many days do you have?</label>
+
+        <input
+            type="number"
+            id="plannerDays"
+            placeholder="e.g. 7"
+            min="1"
+        >
+
+        <label>What topics do you need to cover?</label>
+
+        <textarea
+            id="plannerTopics"
+            placeholder="e.g. Deadlocks, Scheduling, Memory Management..."
+        ></textarea>
+
+        <label>How many hours can you study each day?</label>
+
+        <input
+            type="number"
+            id="plannerHours"
+            placeholder="e.g. 3"
+            min="1"
+        >
+
+        <button class="generate-plan" onclick="generatePlan()">
+            ✨ Create My Study Plan
+        </button>
+
+        <div id="plannerResult" class="planner-result"></div>
+
+    </div>
+
+</div>
+<!-- PRACTICE CHALLENGE POPUP -->
+
+<div id="practiceModal" class="planner-modal">
+
+    <div class="planner-box">
+
+        <button class="close-planner" onclick="closePractice()">×</button>
+
+        <div class="planner-title">
+
+            <div class="planner-icon">📝</div>
+
+            <div>
+                <span>PRACTICE CHALLENGE</span>
+                <h2>Ready to test yourself? 🌸</h2>
+            </div>
+
+        </div>
+
+        <p class="planner-subtitle">
+            Choose a subject and topic. Buddy will create
+            practice questions to help you prepare for your exam.
+        </p>
+
+        <label>What subject?</label>
+
+        <input
+            type="text"
+            id="practiceSubject"
+            placeholder="e.g. Operating Systems"
+        >
+
+        <label>Which topic?</label>
+
+        <input
+            type="text"
+            id="practiceTopic"
+            placeholder="e.g. Deadlocks"
+        >
+
+        <label>How many questions?</label>
+
+        <input
+            type="number"
+            id="practiceQuestions"
+            placeholder="e.g. 5"
+            min="1"
+            max="20"
+        >
+
+        <button class="generate-plan" onclick="generatePractice()">
+            ✨ Start Challenge
+        </button>
+
+        <div id="practiceResult" class="planner-result"></div>
+
+    </div>
+
+</div>
+<!-- CGPA CALCULATOR POPUP -->
+
+<div id="cgpaModal" class="planner-modal">
+
+    <div class="planner-box">
+
+        <button class="close-planner" onclick="closeCGPA()">×</button>
+
+        <div class="planner-title">
+
+            <div class="planner-icon">🧮</div>
+
+            <div>
+                <span>CGPA CALCULATOR</span>
+                <h2>Let's calculate it! 🌸</h2>
+            </div>
+
+        </div>
+
+        <p class="planner-subtitle">
+            Enter your semester SGPAs and Buddy will calculate
+            your overall CGPA for you.
+        </p>
+
+        <label>Semester 1 SGPA</label>
+
+        <input
+            type="number"
+            id="sem1"
+            placeholder="e.g. 8.5"
+            min="0"
+            max="10"
+            step="0.01"
+        >
+
+        <label>Semester 2 SGPA</label>
+
+        <input
+            type="number"
+            id="sem2"
+            placeholder="e.g. 9.0"
+            min="0"
+            max="10"
+            step="0.01"
+        >
+
+        <label>Semester 3 SGPA</label>
+
+        <input
+            type="number"
+            id="sem3"
+            placeholder="Optional"
+            min="0"
+            max="10"
+            step="0.01"
+        >
+
+        <label>Semester 4 SGPA</label>
+
+        <input
+            type="number"
+            id="sem4"
+            placeholder="Optional"
+            min="0"
+            max="10"
+            step="0.01"
+        >
+
+        <button class="generate-plan" onclick="calculateCGPA()">
+            🧮 Calculate My CGPA
+        </button>
+
+        <div id="cgpaResult" class="planner-result"></div>
+
+    </div>
+
+</div>
+<!-- ASK FROM IMAGE POPUP -->
+
+<div id="imageBuddyModal" class="planner-modal">
+
+    <div class="planner-box">
+
+        <button class="close-planner" onclick="closeImageBuddy()">×</button>
+
+        <div class="planner-title">
+
+            <div class="planner-icon">📸</div>
+
+            <div>
+                <span>ASK FROM IMAGE</span>
+                <h2>Show Buddy your question! 🌸</h2>
+            </div>
+
+        </div>
+
+        <p class="planner-subtitle">
+            Upload a question, notes, or study material and
+            Buddy will help explain it.
+        </p>
+
+        <label>Upload an image</label>
+
+        <input
+            type="file"
+            id="studyImage"
+            accept="image/*"
+        >
+
+        <label>What would you like Buddy to do?</label>
+
+        <textarea
+            id="imageQuestion"
+            placeholder="e.g. Explain this question step by step..."
+        ></textarea>
+
+        <button class="generate-plan" onclick="askFromImage()">
+            ✨ Ask Buddy
+        </button>
+
+        <div id="imageResult" class="planner-result"></div>
+
+    </div>
+
+</div>
+<!-- QUIZ MODE POPUP -->
+
+<div id="quizModal" class="planner-modal">
+
+    <div class="planner-box">
+
+        <button class="close-planner" onclick="closeQuiz()">×</button>
+
+        <div class="planner-title">
+
+            <div class="planner-icon">🎯</div>
+
+            <div>
+                <span>QUIZ MODE</span>
+                <h2>Ready for a challenge? 🌸</h2>
+            </div>
+
+        </div>
+
+        <p class="planner-subtitle">
+            Choose a subject and topic. Buddy will create
+            an interactive quiz for you.
+        </p>
+
+        <label>What subject?</label>
+
+        <input
+            type="text"
+            id="quizSubject"
+            placeholder="e.g. Operating Systems"
+        >
+
+        <label>Which topic?</label>
+
+        <input
+            type="text"
+            id="quizTopic"
+            placeholder="e.g. Deadlocks"
+        >
+
+        <label>Number of questions</label>
+
+        <input
+            type="number"
+            id="quizQuestions"
+            placeholder="e.g. 5"
+            min="1"
+            max="10"
+        >
+
+        <button class="generate-plan" onclick="generateQuiz()">
+            🎯 Generate My Quiz
+        </button>
+
+        <div id="quizResult" class="planner-result"></div>
+
+    </div>
+
+</div>
+<!-- POMODORO TIMER MODAL -->
+<div id="pomodoroModal" class="planner-modal">
+
+    <div class="pomodoro-box">
+
+        <button class="close-planner" onclick="closePomodoro()">×</button>
+
+        <div class="pomodoro-header">
+            <div class="tomato-mascot">🍅</div>
+
+            <div>
+                <span>FOCUS TIME</span>
+                <h2>Let's get things done! ✨</h2>
+            </div>
+        </div>
+
+        <p class="pomodoro-subtitle">
+            A little focus, a little break, and lots of progress 🌱
+        </p>
+
+        <div class="pomodoro-streak">
+            🌸 <span id="pomodoroSession">Session 1</span> 🌸
+        </div>
+
+        <div class="timer-circle">
+
+            <div class="timer-inner">
+
+                <div id="pomodoroMode" class="pomodoro-mode">
+                    FOCUS TIME
+                </div>
+
+                <div id="pomodoroTime" class="pomodoro-time">
+                    25:00
+                </div>
+
+                <div id="pomodoroMessage" class="tiny-message">
+    You've got this! 💪
+</div>
+
+            </div>
+
+        </div>
+
+        <div class="pomodoro-buttons">
+
+            <button
+                class="pomodoro-start"
+                onclick="startPomodoro()"
+                id="pomodoroStart"
+            >
+                ▶ Start Focusing
+            </button>
+
+            <button
+                class="pomodoro-reset"
+                onclick="resetPomodoro()"
+            >
+                ↻
+            </button>
+
+        </div>
+
+        <div class="pomodoro-tip">
+            💡 <strong>Buddy's tip:</strong>
+            Put your phone away and give yourself 25 minutes of distraction-free focus!
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
